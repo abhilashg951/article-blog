@@ -1,0 +1,29 @@
+<!--<!DOCTYPE html>-->
+{% extends "base.html" %}
+{%load static %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Title</title>-->
+
+     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!--&lt;!&ndash;<script type="text/javascript" src="{%static '/js/signup.js'%}"></script>&ndash;&gt;-->
+ <script type="text/javascript" src="/static/css/style.css"></script>
+<script type="text/javascript" src="/static/js/signup.js"></script>
+<!--</head>-->
+<!--<body>-->
+{% block body_block %}
+<div class="card center">
+    <input  style="border: 1px solid black;" type="text" id="email" placeholder="Email or Phone no">
+<input  style="border: 1px solid black;" type="text" id="password" placeholder="Password">
+<input class="btn" type="submit" onclick="login()" value="login"/>
+</div>
+{% endblock %}
+
+
+<!--</body>-->
+<!--</html>-->

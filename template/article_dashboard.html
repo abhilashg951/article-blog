@@ -1,0 +1,60 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+
+{% load static %}
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!--&lt;!&ndash;<script type="text/javascript" src="{%static '/js/signup.js'%}"></script>&ndash;&gt;-->
+   <script type="text/javascript" src="/static/css/style.css"></script>
+  <script type="text/javascript" src="/static/js/signup.js"></script>
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Title</title>-->
+</head>
+<!--<body>-->
+<nav class="navbar navbar-default navbar-static-top">
+   <a class="right" href="/logout_get/">Logout</a>
+ </nav>
+ {% block body_block %}
+
+<input type="hidden" id="qwerty" value="">
+<div id="main-div">
+<h5>Welcome to DashBoard</h5>
+<a class="btn right" href = "/add_article/">Add new Article</a>
+<table>
+  <tr>
+    <th>S.No.</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Category</th>
+    <th>Tag</th>
+    <th>Image</th>
+    <th>Action</th>
+  </tr>
+
+
+  {% for i in article_list %}
+  <tr>
+    <td>{{ forloop.counter }}</td>
+    <td>{{ i.article_name }}</td>
+    <td>{{ i.article_desc }}</td>
+    <td>{{ i.category }}</td>
+    <td>{{ i.tag }}</td>
+      <td><img style="height=50px; width:50px" src="{{i.image}}"></td>
+    <td>
+      <a href="#!"class="btn" onclick="edit_article({{ i.id }})">Edit </a> <a href="#!" class="btn" onclick="del_article({{ i.id }})">Delete</a>
+    </td>
+  </tr>
+    {% endfor %}
+</table>
+</div>
+ <div id="edit_article">
+ </div>
+{% endblock %}
+
+
+<!--</body>-->
+<!--</html>-->

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{%load static %}
+<!--<html lang="en">-->
+<!--<head>-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!--&lt;!&ndash;<script type="text/javascript" src="{%static '/js/signup.js'%}"></script>&ndash;&gt;-->
+ <!--<script type="text/javascript" src="/static/css/style.css"></script>-->
+<script type="text/javascript" src="/static/js/signup.js"></script>
+<style>
+    .input-text{
+    border: 1px solid black;
+    }
+</style>
+<!--</head>-->
+<!--<body>-->
+<!--<form method="POST" action="/signup_post/">-->
+{% block body_block %}
+<div class="card">
+   <div class="card-content center" >
+        <input style="border: 1px solid black;" type="text" id="first_name" placeholder="First Name">
+        <input style="border: 1px solid black;" type="text" id="last_name" placeholder="Last Name">
+        <input style="border: 1px solid black;" type="text" id="phone_no" placeholder="Phone no">
+         <input style="border: 1px solid black;" type="text" id="dob" placeholder="Date of birth">
+         <input style="border: 1px solid black;" type="text" id="email" placeholder="Email">
+        <input style="border: 1px solid black;" type="text" id="password" placeholder="Password">
+        <input style="border: 1px solid black;" type="text" id="confirm_password" placeholder="Confirm Password">
+        <input class="btn" type="submit" value="Register" onclick="signup()"/>
+   </div>
+    </div>
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
+{% endblock %}

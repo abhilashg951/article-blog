@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Base</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/signup.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container-main-text">
+        <!--<input style="width:20%" type="text" id="qwerty" value=""/>-->
+            <a class="right signup-next" href="/signup_get/">&nbsp Register</a>
+            <a class=" right" href="/login_get/">Login / </a>
+        <!--<a class=" right" href="/logout_get/">Logout</a>-->
+      </div>
+    </nav>
+    <div class="container">
+    {% block body_block %}
+      <h1>Welcome to Article Blog</h1>
+    {% endblock %}
+    </div>
+
+
+  </body>
+</html>
